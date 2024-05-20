@@ -1,12 +1,12 @@
 #!/usr/bin/python3
-'''Defines a class Square that defines a square with size and can calculate the area.
+'''Defines a class Square.
 '''
 
 
 class Square:
     '''Represents a square.
     '''
-    
+
     def __init__(self, size=0):
         '''Initialize the square with size
         '''
@@ -22,7 +22,7 @@ class Square:
     def size(self, value):
         '''Set the size of the square and validate it
         '''
-        if type(value) != int:
+        if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
             raise ValueError("size must be >= 0")
