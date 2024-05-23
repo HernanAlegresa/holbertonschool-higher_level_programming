@@ -1,0 +1,62 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+# matriz de un solo elemento
+>>> matrix_divided([[4]], 2)
+[[2.0]]
+
+# con div cero
+>>> matrix_divided([[4]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+# con divisor no int
+>>> matrix_divided([[4]], "b")
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+# con filas de diferente tamaño
+>>> matrix_divided([[4, 1], [1, 2, 3]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# con elementos no int en la matriz
+>>> matrix_divided([[4, "5"], [10, 2]], 2)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# con divisor infinito
+>>> matrix_divided([[6, 12], [18, 24]], float('inf'))
+[[0.0, 0.0], [0.0, 0.0]]
+
+# con una fila vacía
+>>> matrix_divided([[10], []], 5)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+# con matriz vacía
+>>> matrix_divided([], 4)
+[]
+
+# con matriz None
+>>> matrix_divided(None, 4)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# con matriz y divisor None
+>>> matrix_divided(None, None)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Prueba adicional con matrices más grandes y valores distintos
+>>> matrix_divided([[10, 20], [30, 40]], 10)
+[[1.0, 2.0], [3.0, 4.0]]
+
+>>> matrix_divided([[15.5, 25.5], [35.5, 45.5]], 5)
+[[3.1, 5.1], [7.1, 9.1]]
