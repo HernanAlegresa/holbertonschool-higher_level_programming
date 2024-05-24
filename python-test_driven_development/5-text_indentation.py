@@ -21,10 +21,10 @@ def text_indentation(text):
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     
-    characters = ".?:"
+    the_characters = [".", "?", ":"]
     result = ""
     for char in text:
         result += char
-        if char in characters:
+        if char in the_characters:
             result += "\n\n"
     print(result)
