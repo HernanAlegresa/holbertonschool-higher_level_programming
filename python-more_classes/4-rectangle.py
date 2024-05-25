@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Defines a rectangle"""
-    
+
     def __init__(self, width=0, height=0):
         """Initialize the rectangle with width and height"""
         self.width = width
@@ -51,3 +51,6 @@ class Rectangle:
             if i < self.__height - 1:
                 rect_str += "\n"
         return rect_str
+
+    def __repr__(self):
+        return "Rectangle({}, {})".format(self.__width, self.__height)
