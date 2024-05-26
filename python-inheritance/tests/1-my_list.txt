@@ -18,6 +18,10 @@
 >>> empty_list.print_sorted()
 []
 
+>>> my_list = MyList([-4, -5])
+>>> my_list.print_sorted()
+[-4, -5]
+
 >>> single_element_list = MyList([42])
 >>> single_element_list.print_sorted()
 [42]
