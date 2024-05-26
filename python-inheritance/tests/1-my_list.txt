@@ -1,0 +1,31 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(5)
+>>> my_list.append(3)
+
+>>> print(my_list)
+[1, 5, 3]
+
+>>> my_list.print_sorted()
+[1, 3, 5]
+
+>>> print(my_list)
+[1, 5, 3]
+
+>>> empty_list = MyList()
+>>> empty_list.print_sorted()
+[]
+
+>>> single_element_list = MyList([42])
+>>> single_element_list.print_sorted()
+[42]
+
+>>> equal_elements_list = MyList([5, 5, 5])
+>>> equal_elements_list.print_sorted()
+[5, 5, 5]
+
+>>> sorted_list = MyList([1, 2, 3])
+>>> sorted_list.print_sorted()
+[1, 2, 3]
