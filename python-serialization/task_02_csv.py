@@ -16,6 +16,9 @@ def convert_csv_to_json(csv_file):
     except FileNotFoundError:
         return False
 
-    with open('data.jason', 'w') as jasonfile:
-        json.dump(data, jsonfile)
-    return True
+    try:
+        with open('data.jason', 'w') as jasonfile:
+            json.dump(data, jsonfile)
+        return True
+    except Exception:
+        return False
