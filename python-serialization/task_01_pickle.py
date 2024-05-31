@@ -2,7 +2,7 @@
 """
 1. Pickling Custom Classes
 """
-import json
+import pickle
 
 
 class CustomObject:
