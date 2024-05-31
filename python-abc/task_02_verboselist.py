@@ -22,6 +22,6 @@ class VerboseList(list):
     def pop(self, index=None):
         if index is None:
             index = -1
-        else:
-            item = super().pop(index)
-            print(f"Popped {item} from the list.")
+        item = super().pop(index)
+        print(f"Popped {item} from the list.")
+        return item
