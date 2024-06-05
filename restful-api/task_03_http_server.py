@@ -4,6 +4,7 @@ import http.server
 import socketserver
 import json
 
+
 PORT = 8000
 
 
@@ -46,6 +47,8 @@ class SimpleHTTPRequestHandler(http.server.BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(response).encode('utf-8'))
 
 
-with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
-    print(f"Serving at port {PORT}")
-    httpd.serve_forever()
+if __name__ == "__main__":
+    SimpleHTTPRequestHandler()
+    with socketserver.TCPServer(("", PORT), SimpleHTTPRequestHandler) as httpd:
+        print(f"Serving at port {PORT}")
+        httpd.serve_forever()
