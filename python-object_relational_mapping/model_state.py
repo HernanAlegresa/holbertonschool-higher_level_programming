@@ -2,7 +2,7 @@
 """
 Defines a State class and a Base class to map to the 'states' table in the database.
 """
-from sqlalchemy import Column, Integer, String, create_engine
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import declarative_base
 
 Base = declarative_base()

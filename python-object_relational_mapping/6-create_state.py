@@ -4,7 +4,7 @@ Script to create the 'states' table in the database.
 """
 import sys
 from sqlalchemy import create_engine
-from model_state import Base, State
+from model_state import Base
 
 if __name__ == "__main__":
     """
