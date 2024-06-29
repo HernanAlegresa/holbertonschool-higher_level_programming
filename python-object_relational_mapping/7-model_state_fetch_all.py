@@ -8,20 +8,14 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    # Conectar a la base de datos usando argumentos
     engine = create_engine(f'mysql+mysqldb://{sys.argv[1]}:{sys.argv[2]}@localhost/{sys.argv[3]}', pool_pre_ping=True)
     Base.metadata.create_all(engine)
 
-    # Crear una sesión
     Session = sessionmaker(bind=engine)
     session = Session()
-
-    # Consultar todos los objetos State y ordenarlos por id
     states = session.query(State).order_by(State.id).all()
 
-    # Imprimir los resultados
     for state in states:
         print("{}: {}".format(state.id, state.name))
 
-    # Cerrar la sesión
     session.close()
