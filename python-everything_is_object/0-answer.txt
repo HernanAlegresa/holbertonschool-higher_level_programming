@@ -1,0 +1,2 @@
+- Esta función te devuelve el tipo de cualquier objeto que pases como argumento.
+type
